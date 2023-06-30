@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+
+<input type="number">
+<button type="button"> Compare com meu segredo </button>
+
+<script>
+
+    var segredos=[];
+    var tamanhoSegredos=0
+    var valido=false
+    while (valido==false) {
+    var dificuldade=parseInt(prompt("Digite a dificuldade do jogo. \n1-facil; 2-medio; 3-dificil"))    
+        if (dificuldade==1){
+
+            tamanhoSegredos=7;
+            valido=true; 
+        }
+        else if (dificuldade==2) {
+
+            tamanhoSegredos=5;
+            valido=true;
+        }
+        else if (dificuldade==3) {
+
+            tamanhoSegredos=3;
+            valido=true;
+        } else { 
+
+            alert("Escolha uma dificuldade válida");
+        }
+    }
+    for (var i=0;i<tamanhoSegredos;i++) {
+// para evitar que, caso tenha 0 ou número já existente, mantenhamos o número fixo de index, uma vez que só quebra o while p for, se atender as condições
+        while (true) {
+        var numero=Math.round(Math.random()*100)
+        if (numero!=0 && segredos.indexOf(numero)==-1) {
+            segredos.push(numero);
+            break
+        }
+        }
+    }
+    console.log(segredos);
+
+    var entrada=document.querySelector("input");
+    entrada.focus();
+
+    function verifica() {
+    	var encontrou=false
+
+  		for (var i=0;i<segredos.length;i++) {	
+	        if (entrada.value==segredos[i]) {
+	        	encontrou=true;
+	        	break;
+	    	}
+	    }	    	
+	    
+	    if (encontrou) {
+
+	            alert("Você acertou");
+	    } else {
+
+	            alert("Você errou");
+	    }
+
+	        entrada.value="";
+	        entrada.focus();
+    }
+    
+    var butao=document.querySelector("button"); 
+    butao.onclick=verifica;
+
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write("<big>" + frase + "</big>");
+        pulaLinha();
+    }
+
+    var qtdIdades=parseInt(prompt("Digite o número de pessoas"));
+    var somaIdade=0
+
+    for (var i=1;i<=qtdIdades;i++) {
+        var idade=parseInt(prompt("Digite a idade da pessoa " + i))
+        somaIdade=somaIdade+idade
+
+    }
+
+    var media=somaIdade/qtdIdades
+
+    mostra("A média das idades é " + media);
+
+</script>

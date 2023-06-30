@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<input type="number">
+<button type="button"> Compare com meu segredo </button>
+
+<script>
+
+    var segredos=[5,7,10,2];
+//    segredos=Math.round(Math.random()*10);
+    var entrada=document.querySelector("input");
+    entrada.focus();
+
+    function verifica() {
+    	var encontrou=false
+
+  		for (var i=0;i<segredos.length;i++) {	
+	        if (entrada.value==segredos[i]) {
+	        	encontrou=true;
+	        	break;
+	    	}
+	    }	    	
+	    
+	    if (encontrou) {
+
+	            alert("Você acertou");
+	    } else {
+
+	            alert("Você errou");
+	    }
+
+	        entrada.value="";
+	        entrada.focus();
+    }
+    
+    var butao=document.querySelector("button"); 
+    butao.onclick=verifica;
+
+</script>

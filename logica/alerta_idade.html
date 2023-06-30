@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+    function exibeAlerta(mensagem) {
+        alert("***" + mensagem + "***");
+    }
+
+    var idade1 = 10;
+    var idade2 = 20;
+    var idade3 = 30;
+    var totalIdades = idade1 + idade2 + idade3;
+    var mediaIdades = totalIdades/3;
+
+    exibeAlerta("Total de idades é " + totalIdades);
+    exibeAlerta("A média das idades é " +  mediaIdades);
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write("**************************************************");
+        pulaLinha();
+        document.write(frase);
+        pulaLinha();
+    }
+
+    mostra("BEM-VINDO AO MEU PROGRAMA");
+    mostra("ELE REALMENTE FUNCIONA");
+    mostra("EU USEI FUNÇÃO PARA FAZER ISSO");
+
+</script>
+</script>

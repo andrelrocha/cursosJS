@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write("<big>" + frase + "</big>");
+        pulaLinha();
+    }
+
+    var multiplo=parseInt(prompt("Digite o número da tabuada a ser definido como fator"));
+    var limite=parseInt(prompt("Até que número você quer que o fator seja multiplicado."))
+
+//    while (cont<(limite+1)) {
+    for (var cont=1; cont<(limite+1);cont++) {
+
+        mostra(multiplo + "x" + cont + "=" + multiplo*cont);
+    }
+
+</script>

@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write("<big>" + frase + "</big>");
+        pulaLinha();
+    }
+
+    var anoCopa=1930;
+    var anoAtual=parseInt(prompt("Digite o ano atual"));
+
+    while (anoCopa<=anoAtual) {
+    if (anoCopa>1938 && anoCopa<1949) {
+        mostra("A copa do mundo de " + anoCopa + " foi cancelada devido à 2ª guerra.");
+    } else {
+
+        mostra("Tivemos copa em " + anoCopa);
+    }
+    anoCopa+=4; 
+
+    }
+
+    mostra("FIM!")
+
+</script>
