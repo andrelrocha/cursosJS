@@ -22,14 +22,15 @@ class User {
     }
 }
 
-const newUser = new User("John", "1313");
+const newUser = new User("John", "senhaFacil");
 
-for (let senhaTeste = 0; senhaTeste < 10000; senhaTeste++) {
-    const authentication = newUser.authenticate("John", senhaTeste.toString());
+const senhasComuns = ["senha", "123456", "senha123", "senhaFacil", "admin", "blink182", "brasil", "senha123456"]
+
+for (let senhaTeste of senhasComuns) {
+    const authentication = newUser.authenticate("John", senhaTeste);
 
     if (authentication) {
         console.log(`Senha encontrada: ${senhaTeste}`);
         break;
     }
 }
-
